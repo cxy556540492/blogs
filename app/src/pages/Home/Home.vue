@@ -12,26 +12,46 @@
     <div class="classification">
       <h2>博客分类</h2>
       <p>好好学习，天天向上</p>
-      <el-row :gutter="20">
-        <el-col :span="6" :xs='24' :md="12" :lg="6"><div class="grid-content sort">
+      <el-row>
+        <el-col :span="6" :sm='12' :xs='24' :md="12" :lg="6"><div class="grid-content sort">
           <div class="sort-img">
             <img src="/images/sort1.jpg" alt="">
           </div>
+          <div class="sort-down">
+            <h2>股市世界</h2>
+            <p>本栏讲诉博主的投资股市的艰辛历程以及对股市的见解，人生就像股市那样，在高峰的时候要懂得减仓，在低谷的时候要懂得加仓</p>
+            <el-button type="primary" class="button" icon="el-icon-shopping-cart-full">马上进入</el-button>
+          </div>    
         </div></el-col>
-        <el-col :span="6" :xs='24':md="12" :lg="6"><div class="grid-content sort">
+        <el-col :span="6" :sm='12' :xs='24' :md="12" :lg="6"><div class="grid-content sort">
           <div class="sort-img">
             <img src="/images/sort2.jpg" alt="">
           </div>
+          <div class="sort-down">
+            <h2>web前端之路</h2>
+            <p>一切的一切都有命运的安排，既然选择了这条道路，那么，就一直的，勇敢的走下去，不要回头，前端开发之路点击马上进入</p>
+            <el-button type="primary" class="button" icon="el-icon-unlock">马上进入</el-button>
+          </div>    
         </div></el-col>
-        <el-col :span="6":xs='24' :md="12" :lg="6"><div class="grid-content sort">
+        <el-col :span="6" :sm='12' :xs='24' :md="12" :lg="6"><div class="grid-content sort">
           <div class="sort-img">
             <img src="/images/sort3.jpg" alt="">
           </div>
+          <div class="sort-down">
+            <h2>深圳之行</h2>
+            <p>毕业了就来到的城市，遇见了许多有趣的人，增长了许多的知识，人生就是一场旅行，失去或者得到，我们一直都在，深漂之旅的点点滴滴</p>
+            <el-button type="primary" class="button" icon="el-icon-bicycle">马上进入</el-button>
+          </div>    
         </div></el-col>
-        <el-col :span="6" :xs='24':md="12" :lg="6"><div class="grid-content sort">
+        <el-col :span="6" :sm='12' :xs='24' :md="12" :lg="6"><div class="grid-content sort">
           <div class="sort-img">
             <img src="/images/sort4.jpg" alt="">
           </div>
+          <div class="sort-down">
+            <h2>游戏人生</h2>
+            <p>人生如戏，戏如人生，一场游戏一场梦，打的不是游戏，是寂寞，越是寂寞，就越是向前走，点击进入，马上了解博主的游戏人生</p>
+            <el-button type="primary" class="button" icon="el-icon-coordinate">马上进入</el-button>
+          </div>    
         </div></el-col>
       </el-row>
     </div>
@@ -173,15 +193,29 @@ export default {
     color:#909399;
     margin-bottom: 50px;
   }
-  .sort-img{
-    width: 300px;
-    height: 180px;
-    margin: auto;
-    img{
+  .sort{
+    margin:20px;
+    .sort-img{
       width: 100%;
-      height: 100%;
+      height: 200px;
+      margin: auto;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .sort-down{
+      background-color: #EBEEF5;
+      padding-bottom: 10px;;
+      height: 150px;
+      p{
+        font-size: 12px;
+        line-height: 14px;
+        margin-bottom: 10px;
+      }
     }
   }
+  
 }
 
 

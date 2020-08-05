@@ -55,6 +55,53 @@
         </div></el-col>
       </el-row>
     </div>
+    <div class="about">
+      <ul>
+        <li>
+          <el-button type="info" class="bg-change" >关于我</el-button>
+          <el-button type="info" class="bg-change">友情链接</el-button>
+        </li>
+      </ul>
+    </div>
+    <div class="personal">
+      <h2>CRJ个人博客</h2>
+      <p>人生苦短，即使行乐，开心了就笑，难过了就哭，得不到就努力去得到，失去了就让它失去</p>
+    </div>
+    <div class="footer">
+      <el-row>
+        <el-col :span="8" :xs="24"><div class="grid-content list">
+          <h3>CRJ个人博客</h3>
+          <p>终有一天，我会变得很强</p>
+          <el-button type="primary" icon="el-icon-search">点击马上了解我</el-button>
+          <p>
+            <i class="el-icon-star-off"></i>
+            <i class="el-icon-star-off"></i>
+            <i class="el-icon-star-off"></i>
+            <i class="el-icon-star-off"></i>
+            <i class="el-icon-star-off"></i>
+            <i class="el-icon-star-off"></i>
+            <i class="el-icon-star-off"></i>
+          </p>
+        </div></el-col>
+        <el-col :span="8" :xs="24"><div class="grid-content list">
+          <h2>相关链接</h2>
+          <ul>
+            <li><i class="el-icon-edit"></i>博文</li>
+            <li><i class="el-icon-chat-line-round"></i>留言</li>
+            <li><i class="el-icon-document"></i>资源</li>
+            <li><i class="el-icon-edit-outline"></i>日记</li>
+            <li><i class="el-icon-thumb"></i>归档</li>
+          </ul>
+        </div></el-col>
+        <el-col :span="8" :xs="24"><div class="grid-content list">
+          <h3>联系我</h3>
+          <p><i class="el-icon-phone"></i>QQ：491625842</p>
+          <p><i class="el-icon-thumb"></i>微信：18076476744</p>
+          <p><i class="el-icon-user"></i>邮箱：491625842@qq.com</p>
+        </div></el-col>
+      </el-row>
+    </div>
+    <div class="copyright">Copyright © 2019-2020 ZQ个人博客 All Rights Reserved V.5.1.3 粤ICP备1231100号</div>
   </div>
 </template>
 
@@ -63,7 +110,7 @@ export default {
   name: "Home",
   data() {
     return {
-      bgImg: ['/images/bg1.jpg', '/images/bg4.jpg'],
+      bgImg: ['/images/time.jpg','/images/time2.jpg','/images/time10.jpg'],
       timer1:null,
       count:0,
       arr:['欢','迎','光','临'],
@@ -103,7 +150,7 @@ export default {
 
         })
       this.count++;
-      if(this.count==2){
+      if(this.count==3){
         this.count = 0
       }
       this.changeSize()
@@ -122,9 +169,8 @@ export default {
   position: relative;
   .bg {
     content: "";
-    background: transparent url("/images/bg1.jpg") no-repeat fixed center;
+    background: transparent url("/images/time.jpg") no-repeat fixed center;
     background-size: cover;
-    opacity: 0.9;
     top: 0;
     left: 0;
     bottom: 0;
@@ -133,19 +179,19 @@ export default {
     z-index: -1;
   }
   h2 {
-    font-size: 80px;
+    font-size: 50px;
     color:#303133;
     position: absolute;
-    top: 30vh;
+    top: 48vh;
     text-align: center;
     left: 0;
     right: 0;
   }
   p {
-    font-size: 50px;
+    font-size: 30px;
     color:#606266;
     position: absolute;
-    top: 50vh;
+    top: 55vh;
     text-align: center;
     left: 0;
     right: 0;
@@ -215,8 +261,73 @@ export default {
       }
     }
   }
-  
 }
+.about{
+  margin-top: 100px;
+  height: 270px;
+  width: 100%;
+  background:transparent url("/images/bg5.jpg") no-repeat fixed center;
+  position: relative;
+  ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin:auto;
+    width: 300px;
+    height: 100px;
+    button{
+      margin:25px;
+      background:transparent;
+      border-color: #EBEEF5;
+      transition: 1s;
+    }
+    button:hover{
+      background: green;
+    }
+  }
+}
+.personal{
+  margin:100px 0;
+  text-align: center;
+  h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  p{
+    font-size: 16px;
+    line-height: 50px;
+  }
+}
+.footer{
+  color:white;
+  padding: 50px 50px;
+  background-color: #303133;
+  .list{
+    line-height: 50px;
+    i{
+    margin-right: 10px;
+  }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        width: 50%;
 
+      }
+    }
+  }
+}
+.copyright{
+  line-height: 50px;
+  background-color: black;
+  font-size: 12px;
+  color:blanchedalmond;
+  text-align: center;
+}
 
 </style>

@@ -1,16 +1,20 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-31 11:05:25
+ * @LastEditTime: 2020-10-19 16:31:36
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \blogs\app\src\App.vue
+-->
 <template>
   <div id="app">
-    <Home></Home>
+    <router-view></router-view>
   </div>
 </template>
 <script>
-  import Home from './pages/Home/Home'
 
   export default {
     name: "app",
-    components: {
-      Home,
-    }
   }
 </script>
 <style lang="scss">
